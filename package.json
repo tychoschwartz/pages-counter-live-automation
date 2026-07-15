@@ -1,0 +1,14 @@
+{
+  "name": "pages-counter-live-automation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pagescaling marketing site with live Social Blade-backed Instagram stats.",
+  "scripts": {
+    "dev": "vercel dev",
+    "start": "vercel dev"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

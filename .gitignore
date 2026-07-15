@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Vercel
+.vercel/
+
+# Env — never commit secrets
+.env
+.env*.local
+
+# OS / editor
+.DS_Store
+*.log
