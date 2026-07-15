@@ -197,6 +197,17 @@
   .callcard .btn{width:100%;text-align:center;}
   .callcard .callnote{margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--ink-soft);line-height:1.6;}
   .callcard .callnote a{color:var(--accent);}
+
+  /* HOW IT WORKS */
+  .how{padding:clamp(56px,9vw,100px) 0;border-top:1px solid var(--hair);}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:820px){.steps{grid-template-columns:1fr 1fr;}}
+  @media(max-width:480px){.steps{grid-template-columns:1fr;}}
+  .step{border:1px solid var(--hair);border-radius:18px;background:var(--bg-2);padding:26px 22px;display:flex;flex-direction:column;gap:9px;transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s ease,box-shadow .3s ease;}
+  .step:hover{transform:translateY(-5px);border-color:var(--accent-dim);box-shadow:0 22px 48px -28px rgba(92,198,255,.5);}
+  .step .sn{font-family:var(--display);font-weight:300;font-size:46px;line-height:1;color:var(--accent);letter-spacing:-.02em;}
+  .step h3{font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:-.01em;color:var(--ink);}
+  .step p{font-size:14px;color:var(--ink-soft);line-height:1.55;}
   footer{border-top:1px solid var(--hair);padding:34px 0;}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-soft);}
 
@@ -437,12 +448,12 @@
           <div class="ig-high"><span class="hcol"><i>🔥</i><em>Wins</em></span><span class="hcol"><i>💬</i><em>Community</em></span><span class="hcol"><i>+</i><em>New</em></span></div>
           <div class="ig-tabs"><span class="on">▦</span><span>▷</span><span>☺</span></div>
           <div class="ig-grid">
-            <div class="g-dark"><img src="posts/post-1.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
-            <div class="g-dark d2"><img src="posts/post-2.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
-            <div class="g-dark d3"><img src="posts/post-3.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
             <div class="g-quote"><img src="posts/mmm-1.png" alt="" onerror="this.remove()"><span class="qt">ain't no better feeling than knowing you're back in that mode.</span><span class="gm">M</span></div>
             <div class="g-eyes"><img src="posts/mmm-2.png" alt="" onerror="this.remove()"><span class="e1">EYES</span><span class="e2">NEVER</span><span class="e3">LIE</span><span class="e4">CHICO</span><span class="gm">M</span></div>
             <div class="g-news"><img src="posts/mmm-3.png" alt="" onerror="this.remove()"><span class="nh">Multimillionaire Mind</span><span class="nt">Drug Kingpin Found Dead in Miami Beach Estate</span></div>
+            <div class="g-dark"><img src="posts/post-1.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
+            <div class="g-dark d2"><img src="posts/post-2.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
+            <div class="g-dark d3"><img src="posts/post-3.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
           </div>
           <div class="ig-nav"><span>⌂</span><span>⌕</span><span>▶</span><span>♡</span><img class="navpfp" src="logos/multimillionaire_mind.jpg" alt=""></div>
         </div>
@@ -625,6 +636,37 @@
   </div>
 </div></section>
 
+<!-- HOW IT WORKS -->
+<section class="how" id="how"><div class="wrap">
+  <div class="sec-head reveal-up">
+    <span class="eyebrow">How it works</span>
+    <h2>Four steps. Then we run the engine.</h2>
+    <p>From the first call to daily posting.<br>Here's exactly how a page goes from handed-over to growing.</p>
+  </div>
+  <div class="steps" data-stagger>
+    <div class="step">
+      <div class="sn">01</div>
+      <h3>Kickoff &amp; audit</h3>
+      <p>A short Zoom call to look at your page or niche, lock the goals, and set up Discord + Google Drive.</p>
+    </div>
+    <div class="step">
+      <div class="sn">02</div>
+      <h3>Strategy &amp; content plan</h3>
+      <p>We build the angle, the hooks and formats, and a posting calendar tailored to your niche.</p>
+    </div>
+    <div class="step">
+      <div class="sn">03</div>
+      <h3>Daily posting</h3>
+      <p>We schedule and post every day, ride trending audio while it's hot, and test several hooks per idea.</p>
+    </div>
+    <div class="step">
+      <div class="sn">04</div>
+      <h3>Track &amp; double down</h3>
+      <p>A weekly Social Blade report. We kill what underperforms and scale what spikes — every week.</p>
+    </div>
+  </div>
+</div></section>
+
 <!-- OFFER -->
 <section class="offer" id="offer"><div class="wrap">
   <div class="sec-head reveal-up">
@@ -723,8 +765,8 @@
       <div class="cline"><span class="ck">Cost</span><span class="cv">Free — no obligation</span></div>
       <div class="cline"><span class="ck">You leave with</span><span class="cv">A concrete growth plan for your page</span></div>
     </div>
-    <a class="btn btn-1" href="mailto:Schwartzbusinessinquiries@gmail.com?subject=Zoom%20call%20request%20%E2%80%94%20Pagescaling&body=Hi%20Pagescaling%2C%0D%0A%0D%0AI%27d%20like%20to%20book%20a%2030-minute%20Zoom%20call.%0D%0A%0D%0AInstagram%20page%20or%20niche%3A%0D%0APreferred%20days%2Ftimes%3A%0D%0AMain%20goal%3A%0D%0A%0D%0AThanks%21">Schedule a Zoom call</a>
-    <p class="callnote">We'll reply from the same address to lock in a time:<br><a href="mailto:Schwartzbusinessinquiries@gmail.com">Schwartzbusinessinquiries@gmail.com</a></p>
+    <a class="btn btn-1" href="https://calendly.com/schwartzbusinessinquiries/30min" target="_blank" rel="noopener">Book your Zoom call ↗</a>
+    <p class="callnote">Pick a time that suits you on Calendly.<br>Prefer email? <a href="mailto:Schwartzbusinessinquiries@gmail.com?subject=Zoom%20call%20request%20%E2%80%94%20Pagescaling&body=Hi%20Pagescaling%2C%0D%0A%0D%0AI%27d%20like%20to%20book%20a%2030-minute%20Zoom%20call.%0D%0A%0D%0AInstagram%20page%20or%20niche%3A%0D%0APreferred%20days%2Ftimes%3A%0D%0AMain%20goal%3A%0D%0A%0D%0AThanks%21">Schwartzbusinessinquiries@gmail.com</a></p>
   </div>
 </div></section>
 
