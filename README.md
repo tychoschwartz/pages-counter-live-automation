@@ -25,11 +25,40 @@ Browser ◀── live numbers ─────┘  frontend swaps them into the 
 
 - **The Social Blade token never reaches the browser.** Only computed numbers are
   sent to the client.
-- **Edge-cached for 24 hours** (`s-maxage=86400, stale-while-revalidate`). At most
-  one origin call per Vercel region per day hits Social Blade, keeping API credit
-  usage low (~one credit per handle per day).
+- **Refreshed automatically every day.** A [Vercel Cron](vercel.json) hits
+  `/api/cron` once a day (06:00 UTC), which fetches Social Blade and stores a
+  fresh snapshot — so the numbers are up to date every day **without depending on
+  anyone visiting the site**.
+- **Edge-cached for 24 hours** (`s-maxage=86400, stale-while-revalidate`) so bursts
+  of traffic don't hit the origin repeatedly.
 - **Graceful fallback**: no token, an API error, or an offline viewer all fall
   back to the last-known numbers in [`data/pages.js`](data/pages.js).
+
+### Why the plain `index.html` file shows static numbers
+
+Opening `index.html` on its own (no server) can't show live data — Social Blade's
+API requires the secret token in a request header, which is impossible from the
+browser (it would leak the token, and CORS blocks it). The live numbers only
+appear once the site is **deployed to Vercel with the token set**, because then
+the `/api/stats` function exists to fetch them server-side.
+
+### Daily refresh — with or without Vercel KV
+
+| Setup | What happens | Credit usage |
+|---|---|---|
+| **Vercel KV connected** (recommended) | Daily cron writes a snapshot to KV; every visitor reads that snapshot | ~1 fetch-set / day, regardless of traffic |
+| **No KV** | Cron + first daily visitor trigger a live fetch; result is edge-cached 24h | ~1 fetch-set / day + occasional per-region revalidations |
+
+To enable KV: Vercel dashboard → **Storage → Create → KV**, connect it to the
+project. It auto-injects `KV_REST_API_URL` / `KV_REST_API_TOKEN`; the code picks
+it up automatically (and silently skips it if absent).
+
+### Verify it works after deploying
+
+Open **`/api/debug`** on your deployed site (e.g. `https://your-site/api/debug`).
+It reports whether the token is configured and shows how one handle parses —
+green means the live counters will work. Add `?handle=opusreality` to check
+another page.
 
 ### Which numbers are live
 
@@ -55,10 +84,13 @@ Browser ◀── live numbers ─────┘  frontend swaps them into the 
 ```
 index.html            The site — markup, styles and all animations (unchanged design)
 data/pages.js         Single source of truth: every handle + fallback numbers
-api/stats.js          Serverless endpoint the frontend fetches
+api/stats.js          Endpoint the frontend fetches (snapshot-first, then live)
+api/cron.js           Daily Vercel Cron — refreshes the snapshot automatically
+api/debug.js          Post-deploy check that your token works (/api/debug)
+api/_core.js          Shared stats builder + optional Vercel KV persistence
 api/_socialblade.js   Server-side Social Blade client (defensive parsing)
 brand/ logos/ posts/  Image assets, served at the site root
-vercel.json           Caching headers
+vercel.json           Cron schedule + caching headers
 ```
 
 To change a page, its fallback number, or add/remove a handle, edit
