@@ -183,6 +183,20 @@
   .final h2{font-family:var(--display);font-weight:300;font-size:clamp(36px,7vw,76px);line-height:1;letter-spacing:-.03em;}
   .final h2 b{font-weight:600;font-style:italic;}
   .final .btn{margin-top:34px;}
+
+  /* BOOK A CALL */
+  .book{padding:clamp(40px,7vw,80px) 0;border-top:1px solid var(--hair);}
+  .book .sec-head{text-align:center;margin-left:auto;margin-right:auto;}
+  .book .sec-head p{margin-left:auto;margin-right:auto;}
+  .callcard{max-width:560px;margin:clamp(28px,4vw,44px) auto 0;border:1px solid var(--hair);border-radius:22px;background:var(--bg-2);padding:clamp(26px,4vw,40px);text-align:center;}
+  .callcard .callmeta{display:flex;flex-direction:column;gap:14px;text-align:left;margin-bottom:26px;}
+  .callcard .cline{display:flex;justify-content:space-between;align-items:baseline;gap:18px;border-bottom:1px solid var(--hair);padding-bottom:13px;}
+  .callcard .cline:last-child{border-bottom:none;padding-bottom:0;}
+  .callcard .ck{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);flex:none;}
+  .callcard .cv{font-size:15px;color:var(--ink);text-align:right;}
+  .callcard .btn{width:100%;text-align:center;}
+  .callcard .callnote{margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--ink-soft);line-height:1.6;}
+  .callcard .callnote a{color:var(--accent);}
   footer{border-top:1px solid var(--hair);padding:34px 0;}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-soft);}
 
@@ -299,6 +313,16 @@
   .ig-grid b.dk{color:#111;}
   .ig-grid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;display:block;}
   .ig-grid .gm{position:absolute;bottom:3px;left:50%;transform:translateX(-50%);font-family:Georgia,'Times New Roman',serif;font-size:7px;color:#9a9a9a;z-index:0;}
+  /* realistic IG chrome: verified badge, search bar, follow, bottom nav */
+  .ig-name .verified{color:#3897f0;font-size:11px;margin-left:1px;}
+  .ig-search{margin:2px 12px 6px;background:#1c1c1f;border-radius:9px;display:flex;align-items:center;gap:7px;padding:6px 10px;color:#8e8e93;font-size:11px;}
+  .ig-search .mag{font-size:11px;color:#8e8e93;}
+  .ig-btn.follow{background:#0a84ff;color:#fff;}
+  .ig-btn.ico{flex:0 0 32px;}
+  .ig-grid{flex:1;overflow:hidden;align-content:start;}
+  .ig-nav{margin-top:auto;display:flex;justify-content:space-around;align-items:center;padding:9px 8px 11px;border-top:1px solid #1c1c1f;background:#000;}
+  .ig-nav span{font-size:17px;color:#fff;line-height:1;}
+  .ig-nav .navpfp{width:19px;height:19px;border-radius:50%;object-fit:cover;border:1.5px solid #fff;display:block;}
   .g-quote{background:linear-gradient(165deg,#343434,#000 75%);}
   .g-quote .qt{display:block;padding:9px 7px;font-size:6px;line-height:1.4;font-weight:800;color:#f4f4f4;letter-spacing:.02em;}
   .g-eyes{background:linear-gradient(135deg,#1c1c22,#000);}
@@ -387,7 +411,7 @@
   <div class="hero-copy">
     <span class="eyebrow tag reveal-up">Done-for-you faceless page management · Instagram</span>
     <h1 class="reveal-up">We run the pages behind the <b>faceless</b> <span class="u">empire</span>.</h1>
-    <p class="lede reveal-up">Pagescaling runs and manages a portfolio of <b style="color:var(--ink)">6.4M+ followers</b> across faceless Instagram pages — the strategy, every content idea and hook, and daily scheduling and posting. We manage the page; we don't edit the videos ourselves.</p>
+    <p class="lede reveal-up">We run a portfolio of <b style="color:var(--ink)">6.4M+ followers</b> across faceless Instagram pages.<br>Strategy, every content idea and hook, and daily scheduling and posting — done for you.<br>We manage the page; we don't edit the videos ourselves.</p>
     <p class="slogan reveal-up">You own the audience. <b>We run the engine.</b></p>
     <div class="hero-cta reveal-up">
       <a href="mailto:Schwartzbusinessinquiries@gmail.com" class="btn btn-1">Start a conversation</a>
@@ -402,21 +426,25 @@
       <div class="island"></div>
       <div class="screen">
         <div class="ig">
-          <div class="ig-top"><span class="b">+</span><span class="ig-name">multimillion…<span class="chev">▾</span></span><span class="b">☰</span></div>
+          <div class="ig-top"><span class="b">＋</span><span class="ig-name">multimillionaire_mind<span class="verified">✓</span><span class="chev">▾</span></span><span class="b">☰</span></div>
+          <div class="ig-search"><span class="mag">⌕</span><span>Search</span></div>
           <div class="ig-head">
             <div class="ig-pfpwrap"><span class="ig-vibe">Today's vibe…</span><img class="ig-pfp" src="logos/multimillionaire_mind.jpg" alt="@multimillionaire_mind profile"><span class="ig-plus">+</span></div>
             <div class="ig-stats"><div><b>1,530</b><span>posts</span></div><div><b>385K</b><span>followers</span></div><div><b>3</b><span>following</span></div></div>
           </div>
-          <div class="ig-bio"><b>Motivation Success Money</b><br>The world is yours…</div>
-          <div class="ig-chips"><span class="ig-chip">💬 MMM Community</span><span class="ig-chip">+ Add</span></div>
-          <div class="ig-btns"><span class="ig-btn">Edit profile</span><span class="ig-btn">Share profile</span></div>
-          <div class="ig-high"><span class="hcol"><i>+</i><em>New</em></span></div>
-          <div class="ig-tabs"><span class="on">▦</span><span>▷</span><span>⇄</span><span>☺</span></div>
+          <div class="ig-bio"><b>Multimillionaire Mind</b><br>Motivation · Success · Money<br>The world is yours…</div>
+          <div class="ig-btns"><span class="ig-btn follow">Follow</span><span class="ig-btn">Message</span><span class="ig-btn ico">⌄</span></div>
+          <div class="ig-high"><span class="hcol"><i>🔥</i><em>Wins</em></span><span class="hcol"><i>💬</i><em>Community</em></span><span class="hcol"><i>+</i><em>New</em></span></div>
+          <div class="ig-tabs"><span class="on">▦</span><span>▷</span><span>☺</span></div>
           <div class="ig-grid">
+            <div class="g-dark"><img src="posts/post-1.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
+            <div class="g-dark d2"><img src="posts/post-2.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
+            <div class="g-dark d3"><img src="posts/post-3.jpg" alt="" onerror="this.remove()"><span class="gm">M</span></div>
             <div class="g-quote"><img src="posts/mmm-1.png" alt="" onerror="this.remove()"><span class="qt">ain't no better feeling than knowing you're back in that mode.</span><span class="gm">M</span></div>
             <div class="g-eyes"><img src="posts/mmm-2.png" alt="" onerror="this.remove()"><span class="e1">EYES</span><span class="e2">NEVER</span><span class="e3">LIE</span><span class="e4">CHICO</span><span class="gm">M</span></div>
             <div class="g-news"><img src="posts/mmm-3.png" alt="" onerror="this.remove()"><span class="nh">Multimillionaire Mind</span><span class="nt">Drug Kingpin Found Dead in Miami Beach Estate</span></div>
           </div>
+          <div class="ig-nav"><span>⌂</span><span>⌕</span><span>▶</span><span>♡</span><img class="navpfp" src="logos/multimillionaire_mind.jpg" alt=""></div>
         </div>
       </div>
     </div>
@@ -458,9 +486,9 @@
     <a class="tile logo" href="https://instagram.com/aroundvalue" target="_blank" rel="noopener" aria-label="@aroundvalue on Instagram"><img src="logos/aroundvalue.jpg" alt="@aroundvalue logo"><span class="f" data-followers="464000">464K</span><span class="reveal"><span class="rh">@aroundvalue</span><span class="ra">View on Instagram ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/execute" target="_blank" rel="noopener" aria-label="@execute on Instagram"><img src="logos/execute.jpg" alt="@execute logo"><span class="f" data-followers="411000">411K</span><span class="reveal"><span class="rh">@execute</span><span class="ra">View on Instagram ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/moneyciety" target="_blank" rel="noopener" aria-label="@moneyciety on Instagram"><img src="logos/moneyciety.png" alt="@moneyciety logo"><span class="f" data-followers="389000">389K</span><span class="reveal"><span class="rh">@moneyciety</span><span class="ra">View on Instagram ↗</span></span></a>
-    <a class="tile logo" href="https://instagram.com/multimillionaire_mind" target="_blank" rel="noopener" aria-label="@multimillionaire_mind on Instagram"><img src="logos/multimillionaire_mind.jpg" alt="@multimillionaire_mind logo"><span class="f" data-followers="386000" data-suffix=" · ours">386K · ours</span><span class="reveal"><span class="rh">@multimillionaire_mind</span><span class="ra">Our own page ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/wordsyoulovee" target="_blank" rel="noopener" aria-label="@wordsyoulovee on Instagram"><img src="logos/wordsyoulovee.jpg" alt="@wordsyoulovee logo"><span class="f" data-followers="357000">357K</span><span class="reveal"><span class="rh">@wordsyoulovee</span><span class="ra">View on Instagram ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/createimprovement" target="_blank" rel="noopener" aria-label="@createimprovement on Instagram"><img src="logos/createimprovement.jpg" alt="@createimprovement logo"><span class="f" data-followers="295000">295K</span><span class="reveal"><span class="rh">@createimprovement</span><span class="ra">View on Instagram ↗</span></span></a>
+    <a class="tile logo" href="https://instagram.com/multimillionaire_mind" target="_blank" rel="noopener" aria-label="@multimillionaire_mind on Instagram"><img src="logos/multimillionaire_mind.jpg" alt="@multimillionaire_mind logo"><span class="f" data-followers="386000">386K</span><span class="reveal"><span class="rh">@multimillionaire_mind</span><span class="ra">View on Instagram ↗</span></span></a>
   </div>
 </div></section>
 
@@ -469,7 +497,7 @@
   <div class="sec-head reveal-up">
     <span class="eyebrow">Selected results</span>
     <h2>Public, tracked, verifiable.</h2>
-    <p>Real numbers from the pages we manage — every headline below is tracked on <a href="https://socialblade.com" target="_blank" rel="noopener">Social Blade</a> and cross-checkable on <a href="https://viralfinder.io" target="_blank" rel="noopener">Viral Finder</a>. Open any handle and check it yourself. Editing work I've done personally is listed separately, lower down.</p>
+    <p>Real numbers from the pages we manage.<br>Every headline below is tracked on <a href="https://socialblade.com" target="_blank" rel="noopener">Social Blade</a> and cross-checkable on <a href="https://viralfinder.io" target="_blank" rel="noopener">Viral Finder</a> — open any handle and check it yourself.<br>Editing work I've done personally is listed separately, lower down.</p>
     <p class="fresh" id="freshLine"><span class="livedot"></span> <span id="freshText">Follower counts auto-update daily from Social Blade</span></p>
   </div>
 
@@ -504,11 +532,11 @@
 
   <!-- 2 MMM -->
   <div class="case reveal-up">
-    <div class="ce">02 — Content management · our own page</div>
+    <div class="ce">02 — Content management</div>
     <div class="ch"><img class="clogo" src="logos/multimillionaire_mind.jpg" alt="">@multimillionaire_mind</div>
-    <div class="csub">Wealth &amp; mindset · <b data-live-followers="multimillionaire_mind">386K</b> followers · run in-house</div>
+    <div class="csub">Wealth &amp; mindset · <b data-live-followers="multimillionaire_mind">386K</b> followers</div>
     <div class="chero">
-      <div><div class="big">+28.6<span>K</span></div><div class="bigc">followers in 30 days on our own page — we eat our own cooking</div></div>
+      <div><div class="big">+28.6<span>K</span></div><div class="bigc">followers in 30 days — steady, compounding growth</div></div>
       <div><svg class="chart" data-k="mmm" viewBox="0 0 520 160" preserveAspectRatio="none"></svg><div class="cnote"><span>5 JUN</span><span>17 JUN · 385,864</span></div></div>
     </div>
     <div class="crow">
@@ -516,7 +544,7 @@
       <div><div class="v" data-live-grade="multimillionaire_mind">A−</div><div class="l">SB grade</div></div>
       <div><div class="v" data-live-er="multimillionaire_mind">2.51%</div><div class="l">engagement rate</div></div>
     </div>
-    <div class="cfoot"><p>Our own faceless page — the same system, run on ourselves.</p><a class="verify" href="https://socialblade.com/instagram/user/multimillionaire_mind" target="_blank" rel="noopener">Verify on Social Blade</a></div>
+    <div class="cfoot"><p>A wealth &amp; mindset page grown with the same system — concepts and daily posting, managed end to end.</p><a class="verify" href="https://socialblade.com/instagram/user/multimillionaire_mind" target="_blank" rel="noopener">Verify on Social Blade</a></div>
   </div>
 
   <!-- 3 PHILOSOPHART -->
@@ -559,7 +587,7 @@
   <div class="sec-head reveal-up">
     <span class="eyebrow">Track record beyond the portfolio · as editor</span>
     <h2>Editing that moves numbers.</h2>
-    <p>This is <b style="color:var(--ink)">separate from the management service</b> — editing isn't part of a standard plan. As a personal credential, I also <b style="color:var(--ink)">edit reels and content</b> for other large, <b style="color:var(--ink)">active</b> faceless pages. If you'd like editing added to your plan, this is the kind of work it covers — we'd agree it separately. Two stand out, third-party tracked and scoped to the windows below.</p>
+    <p>This is <b style="color:var(--ink)">separate from the management service</b> — editing isn't part of a standard plan.<br>As a personal credential, I also <b style="color:var(--ink)">edit reels and content</b> for other large, <b style="color:var(--ink)">active</b> faceless pages.<br>Want editing added to your plan? This is the kind of work it covers — we'd scope it separately.</p>
   </div>
 
   <div class="ed-grid">
@@ -672,33 +700,31 @@
       <div class="ans">Honest answer: not every page rockets, and we don't sell a timeline. Instagram runs throttling waves where whole niches go quiet for weeks. When that happens we change the variables — new hooks, formats, posting windows and concepts — until something breaks through, and you see every number in the weekly report. We lead with what's verifiable precisely because we won't promise a curve no one can control.</div>
     </details>
     <details>
-      <summary>Some pages in your portfolio look flat right now — why?<span class="pm">+</span></summary>
-      <div class="ans">Because we show the real picture, not a highlight reel. A few pages are in a quiet stretch while Instagram works through a broader throttling wave; others added <b>100K+ in 30 days</b> in that same period. The whole point of putting it on Social Blade and Viral Finder is that you can see the wins <i>and</i> the flat ones yourself — that's the part most agencies hide.</div>
-    </details>
-    <details>
-      <summary>These are other people's pages — how do I know you grew them?<span class="pm">+</span></summary>
-      <div class="ans">Fair question. On the pages we <b>manage</b>, the growth lines up with when we took over — content management started in <b>March</b>, and the Social Blade curves move from there. Where I worked purely as an <b>editor</b> (e.g. @victorianpoetry, @vawtez) the role and the working window are labelled separately, because that's a different job with different dates. Everything is dated and third-party tracked, so you can match the timeline yourself.</div>
-    </details>
-    <details>
-      <summary>How hands-on do I have to be?<span class="pm">+</span></summary>
-      <div class="ans">As close to zero as you want. We handle <b>the strategy, the content ideas and hooks, and the scheduling and posting</b> — daily — and deliver through Discord and Google Drive with a Notion SOP hub so you can see the system. You approve the direction; we run the engine. You own the audience the whole way through.</div>
-    </details>
-    <details>
       <summary>Is there lock-in, and what isn't included?<span class="pm">+</span></summary>
       <div class="ans">No lock-in beyond the month — you can stop anytime and you keep the page and the audience. What's <b>not</b> included is paid ad spend or buying followers (we don't do either); the price covers the full content operation. If you ever leave, the system and SOPs we built around your page leave with you.</div>
-    </details>
-    <details>
-      <summary>What kind of pages do you take on?<span class="pm">+</span></summary>
-      <div class="ans">Faceless theme pages — wealth, mindset, motivation, philosophy, business, discipline and similar. Whether it's a page you already own or one we build the strategy for from scratch, the system is the same. Not sure your niche fits? Ask — we'll tell you straight.</div>
-    </details>
-    <details>
-      <summary>How do we get started?<span class="pm">+</span></summary>
-      <div class="ans">Tell us the page (or the niche, if you're starting fresh) and the goal. We come back with how we'd run it — the angle, the content ideas and the posting cadence — and which plan fits. Onboarding is a short kickoff on Discord, a shared Google Drive and a Notion hub, and we start posting within days.</div>
     </details>
     <details>
       <summary>Can I check the numbers?<span class="pm">+</span></summary>
       <div class="ans">Please do. Every case links straight to that page's <a href="https://socialblade.com" target="_blank" rel="noopener">Social Blade</a> profile — followers, grades and growth, all public and third-party. You can also pull the same pages up on <a href="https://viralfinder.io" target="_blank" rel="noopener">Viral Finder</a> to see views, reach and top-performing posts. We lead with what's verifiable and let you click through.</div>
     </details>
+  </div>
+</div></section>
+
+<!-- BOOK A ZOOM CALL -->
+<section class="book" id="call"><div class="wrap">
+  <div class="sec-head reveal-up">
+    <span class="eyebrow">Talk to us</span>
+    <h2>Book a Zoom call.</h2>
+    <p>Prefer to talk it through?<br>Grab a free 30-minute Zoom call — we'll look at your page live and map exactly how we'd run it.</p>
+  </div>
+  <div class="callcard reveal-up">
+    <div class="callmeta">
+      <div class="cline"><span class="ck">Format</span><span class="cv">30-minute Zoom call</span></div>
+      <div class="cline"><span class="ck">Cost</span><span class="cv">Free — no obligation</span></div>
+      <div class="cline"><span class="ck">You leave with</span><span class="cv">A concrete growth plan for your page</span></div>
+    </div>
+    <a class="btn btn-1" href="mailto:Schwartzbusinessinquiries@gmail.com?subject=Zoom%20call%20request%20%E2%80%94%20Pagescaling&body=Hi%20Pagescaling%2C%0D%0A%0D%0AI%27d%20like%20to%20book%20a%2030-minute%20Zoom%20call.%0D%0A%0D%0AInstagram%20page%20or%20niche%3A%0D%0APreferred%20days%2Ftimes%3A%0D%0AMain%20goal%3A%0D%0A%0D%0AThanks%21">Schedule a Zoom call</a>
+    <p class="callnote">We'll reply from the same address to lock in a time:<br><a href="mailto:Schwartzbusinessinquiries@gmail.com">Schwartzbusinessinquiries@gmail.com</a></p>
   </div>
 </div></section>
 
@@ -716,7 +742,7 @@
   <div>FACELESS CONTENT · INSTAGRAM · DONE-FOR-YOU</div>
 </div></footer>
 <div class="disclaimer"><div class="wrap">
-  <p>All testimonials shown are real but do not claim to represent typical results. Any success depends on many variables which are unique to each individual, including commitment and effort. Testimonial results are meant to demonstrate what the most dedicated students have done and should not be considered average. Pagescaling makes no guarantee of any financial gain from the use of its products.</p>
+  <p>Pagescaling provides Instagram page management — strategy, content ideas, hooks, scheduling and posting. We do not guarantee any specific follower, view, engagement or revenue result. Social-media growth depends on many factors outside our control, including Instagram's algorithm, your niche, the content and timing; the results shown are real and third-party tracked (e.g. Social Blade, Viral Finder) and were accurate for the dated windows shown, but past performance does not guarantee future results. Editor credits (@victorianpoetry, @vawtez) reflect a separate role and scope from the management service. We do not buy followers and do not use bots or engagement pods; paid ad spend is not included. Pagescaling is an independent service and is not affiliated with, endorsed by or sponsored by Instagram, Meta Platforms, Social Blade or Viral Finder — all trademarks belong to their respective owners.</p>
 </div></div>
 
 <script>
