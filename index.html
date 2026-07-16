@@ -6,7 +6,7 @@
 <title>Pagescaling — the faceless content engine</title>
 <meta name="description" content="Done-for-you faceless Instagram page management. Pagescaling runs 6.4M+ followers across faceless pages — strategy, hooks and daily posting — with real, Social Blade-tracked growth.">
 <meta name="theme-color" content="#0e0e10">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%235cc6ff'/%3E%3Ctext x='33' y='47' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='44' fill='%230e0e10'%3Ep.%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%235cc6ff'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='31' fill='%230e0e10'%3EPS.%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="brand/icon.png">
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
@@ -207,6 +207,17 @@
   .step .sn{font-family:var(--display);font-weight:300;font-size:46px;line-height:1;color:var(--accent);letter-spacing:-.02em;}
   .step h3{font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:-.01em;color:var(--ink);}
   .step p{font-size:14px;color:var(--ink-soft);line-height:1.55;}
+
+  /* WHO RUNS IT */
+  .who{padding:clamp(40px,7vw,80px) 0;border-top:1px solid var(--hair);}
+  .who .sig-wrap{max-width:680px;margin-top:clamp(24px,4vw,34px);}
+  .who p.lead{font-size:17px;color:var(--ink-soft);line-height:1.6;}
+  .who p.lead b{color:var(--ink);font-weight:600;}
+  .who .sig{margin-top:26px;font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(28px,4vw,34px);color:var(--ink);}
+  .who .role{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;}
+  .who .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .who .chip{border:1px solid var(--hair);border-radius:999px;padding:8px 15px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-soft);}
+  .who .chip b{color:var(--accent);font-weight:500;}
   footer{border-top:1px solid var(--hair);padding:34px 0;}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-soft);}
 
@@ -255,6 +266,9 @@
   /* logo image hover zoom */
   .tile.logo img{transition:transform .45s cubic-bezier(.2,.7,.2,1);}
   .tile.logo:hover img{transform:scale(1.07);}
+  /* tiles whose logo has white rounded corners — zoom in so the white is cropped out */
+  .tile.logo.zoom img{transform:scale(1.16);}
+  .tile.logo.zoom:hover img{transform:scale(1.23);}
   /* results highlights grid */
   .hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:clamp(30px,5vw,48px);}
   @media(max-width:680px){.hl-grid{grid-template-columns:1fr 1fr;}}
@@ -489,7 +503,7 @@
     <a class="tile logo" href="https://instagram.com/businessedgex" target="_blank" rel="noopener" aria-label="@businessedgex on Instagram"><img src="logos/businessedgex.webp" alt="@businessedgex logo"><span class="f" data-followers="670000">670K</span><span class="reveal"><span class="rh">@businessedgex</span><span class="ra">View on Instagram ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/bymotivify" target="_blank" rel="noopener" aria-label="@bymotivify on Instagram"><img src="logos/bymotivify.jpg" alt="@bymotivify logo"><span class="f" data-followers="657000">657K</span><span class="reveal"><span class="rh">@bymotivify</span><span class="ra">View on Instagram ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/hustlingmillionaires" target="_blank" rel="noopener" aria-label="@hustlingmillionaires on Instagram"><img src="logos/hustlingmillionaires.jpg" alt="@hustlingmillionaires logo"><span class="f" data-followers="661000">661K</span><span class="reveal"><span class="rh">@hustlingmillionaires</span><span class="ra">View on Instagram ↗</span></span></a>
-    <a class="tile logo" href="https://instagram.com/causewerefemales" target="_blank" rel="noopener" aria-label="@causewerefemales on Instagram"><img src="logos/causewerefemales.jpg" alt="@causewerefemales logo"><span class="f" data-followers="563000">563K</span><span class="reveal"><span class="rh">@causewerefemales</span><span class="ra">View on Instagram ↗</span></span></a>
+    <a class="tile logo zoom" href="https://instagram.com/causewerefemales" target="_blank" rel="noopener" aria-label="@causewerefemales on Instagram"><img src="logos/causewerefemales.jpg" alt="@causewerefemales logo"><span class="f" data-followers="563000">563K</span><span class="reveal"><span class="rh">@causewerefemales</span><span class="ra">View on Instagram ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/capitalfortunes" target="_blank" rel="noopener" aria-label="@capitalfortunes on Instagram"><img src="logos/capitalfortunes.webp" alt="@capitalfortunes logo"><span class="f" data-followers="506000">506K</span><span class="reveal"><span class="rh">@capitalfortunes</span><span class="ra">View on Instagram ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/inspi" target="_blank" rel="noopener" aria-label="@inspi on Instagram"><span class="mark" style="font-style:normal;color:#fff;font-weight:500;font-size:30px;letter-spacing:-.02em">inspi</span><span class="f" data-followers="498000">498K</span><span class="reveal"><span class="rh">@inspi</span><span class="ra">View on Instagram ↗</span></span></a>
     <a class="tile logo" href="https://instagram.com/adhdreacts" target="_blank" rel="noopener" aria-label="@adhdreacts on Instagram"><img src="logos/adhdreacts.jpg" alt="@adhdreacts logo"><span class="f" data-followers="483000">483K</span><span class="reveal"><span class="rh">@adhdreacts</span><span class="ra">View on Instagram ↗</span></span></a>
@@ -631,6 +645,24 @@
       </div>
       <div class="win">Window: 10 Jun 2025 – 15 Apr 2026 · figures scoped to that period</div>
       <a class="verify" href="https://socialblade.com/instagram/user/vawtez" target="_blank" rel="noopener">Verify on Social Blade</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- WHO RUNS IT -->
+<section class="who" id="who-runs-it"><div class="wrap">
+  <div class="sec-head reveal-up">
+    <span class="eyebrow">Who runs it</span>
+    <h2>One operator behind every page.</h2>
+  </div>
+  <div class="sig-wrap reveal-up">
+    <p class="lead">I run Pagescaling myself — <b>the strategy, the hooks and the daily posting</b> behind every page here. Everything you see is public and third-party tracked, because I'd rather show verifiable numbers than sell a promise.</p>
+    <div class="sig">Tycho&nbsp;Schwartz</div>
+    <div class="role">Founder &amp; operator · Pagescaling</div>
+    <div class="chips">
+      <span class="chip"><b>16+</b> pages operated</span>
+      <span class="chip"><b>6.4M</b> followers managed</span>
+      <span class="chip">Public, tracked results</span>
     </div>
   </div>
 </div></section>
