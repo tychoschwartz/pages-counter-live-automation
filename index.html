@@ -336,6 +336,8 @@
   .ig-grid b{position:absolute;top:4px;right:5px;font-size:8.5px;color:#fff;opacity:.9;font-weight:400;z-index:3;}
   .ig-grid b.dk{color:#111;}
   .ig-grid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;display:block;}
+  /* portrait (4:5) posts — show the whole image so the bottom text stays readable */
+  .ig-grid .g-dark img{object-fit:contain;background:#000;}
   .ig-grid .gm{position:absolute;bottom:3px;left:50%;transform:translateX(-50%);font-family:Georgia,'Times New Roman',serif;font-size:7px;color:#9a9a9a;z-index:0;}
   /* realistic IG chrome: verified badge, search bar, follow, bottom nav */
   .ig-name .verified{color:#3897f0;font-size:11px;margin-left:1px;}
