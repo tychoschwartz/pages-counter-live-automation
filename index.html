@@ -6,13 +6,13 @@
 <title>Pagescaling — the faceless content engine</title>
 <meta name="description" content="Done-for-you faceless Instagram page management. Pagescaling runs 6.4M+ followers across faceless pages — strategy, hooks and daily posting — with real, Social Blade-tracked growth.">
 <meta name="theme-color" content="#0e0e10">
-<link rel="icon" type="image/png" href="brand/pagescaling-mark.png">
-<link rel="apple-touch-icon" href="brand/pagescaling-square-navy.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%235cc6ff'/%3E%3Ctext x='33' y='47' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='44' fill='%230e0e10'%3Ep.%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="brand/icon.png">
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pagescaling — the faceless content engine">
 <meta property="og:description" content="We run the pages behind the faceless empire. 6.4M+ followers managed, real Social Blade-tracked growth.">
-<meta property="og:image" content="brand/pagescaling-square-navy.png">
+<meta property="og:image" content="brand/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <!-- Fonts: preconnect + non-blocking load -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -364,6 +364,8 @@
   #intro{position:fixed;inset:0;z-index:2000;background:radial-gradient(circle at 50% 38%,#16161c,#08080a 72%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;padding:24px;animation:introout .7s 3.2s ease forwards;}
   #intro.hide{opacity:0;visibility:hidden;transition:opacity .7s ease,visibility .7s;}
   #intro .imark{width:210px;height:auto;animation:intropop .85s .1s cubic-bezier(.2,.9,.3,1.5) both;}
+  #intro .iwm{font-family:var(--display);font-style:italic;font-weight:700;font-size:clamp(44px,11vw,92px);letter-spacing:-.02em;color:var(--ink);line-height:1;animation:intropop .9s .1s cubic-bezier(.2,.9,.3,1.5) both;}
+  #intro .iwm .dot{color:var(--accent);}
   @keyframes intropop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
   #intro .iname{font-family:var(--display);font-weight:600;font-size:clamp(26px,6vw,46px);letter-spacing:-.02em;opacity:0;transform:translateY(12px);animation:introup .8s 1.05s ease forwards;}
   #intro .iname b{color:var(--accent);}
@@ -401,8 +403,7 @@
 </head>
 <body>
 <div id="intro" aria-hidden="true">
-  <img class="imark" src="brand/pagescaling-mark.png" alt="Pagescaling logo">
-  <div class="iname">Page<b>scaling</b></div>
+  <div class="iwm">pagescaling<span class="dot">.</span></div>
   <div class="itag">Faceless content · real, tracked growth</div>
   <div class="iskip">tap anywhere to enter</div>
 </div>
