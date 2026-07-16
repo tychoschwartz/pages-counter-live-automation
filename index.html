@@ -17,8 +17,8 @@
 <!-- Fonts: preconnect + non-blocking load -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 <style>
 
   :root{
@@ -44,10 +44,9 @@
   /* NAV */
   nav{position:sticky;top:0;z-index:50;background:rgba(14,14,16,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair);}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .logo{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:-.01em;color:var(--ink);}
-  .logo b{color:var(--accent);font-weight:600;}
-  .logo .lmark{height:30px;width:auto;flex:none;transition:transform .3s ease;}
-  .logo:hover .lmark{transform:translateY(-2px) scale(1.05);}
+  .logo{display:flex;align-items:center;font-family:var(--display);font-style:italic;font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--ink);transition:opacity .2s ease;}
+  .logo:hover{opacity:.82;}
+  .logo .dot{color:var(--accent);}
   .slogan{margin-top:22px;font-family:var(--display);font-weight:400;font-size:clamp(18px,2.4vw,24px);letter-spacing:-.01em;color:var(--ink);padding-left:15px;border-left:2px solid var(--accent);}
   .slogan b{color:var(--accent);font-weight:600;}
   .nav-cta{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--hair);padding:9px 16px;border-radius:999px;transition:.2s;}
@@ -411,8 +410,7 @@
 
 <nav><div class="wrap">
   <a class="logo" href="#" aria-label="Pagescaling — home">
-    <img class="lmark" src="brand/pagescaling-mark.png" alt="Pagescaling logo">
-    <span>Page<b>scaling</b></span>
+    <span>pagescaling<span class="dot">.</span></span>
   </a>
   <a href="mailto:Schwartzbusinessinquiries@gmail.com" class="nav-cta">Contact us</a>
 </div></nav>
